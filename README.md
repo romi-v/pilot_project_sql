@@ -26,8 +26,9 @@ All the data comes from Luke Barousse's SQL Course (https://lukebarousse.com/sql
 Each query for this project aimed at investgating specific aspects of the data job market.
 
 1. Top paying remote data analyst jobs
-   To identify the highest-paying job offers I filtered data analyst positions by average yearly salary and location, focusing on reemote jobs.
-   This query highlights the highest-paying opportunities in the field.
+
+To identify the highest-paying job offers I filtered data analyst positions by average yearly salary and location, focusing on reemote jobs.
+This query highlights the highest-paying opportunities in the field.
 
    _Overview over the top 10 highest paying remote job opportunities for Data Analysts_
 
@@ -45,23 +46,26 @@ Each query for this project aimed at investgating specific aspects of the data j
 | 387860     | Get It Recruit - Information Technology      | ERM Data Analyst                              | Full-time   | 184,000       |
 
 
-3. Top skills in the highest paying job postings
-   To identify the skills associated with the highest paying positions I've filtered in the previous step, I added the required data from the dimension tables.
-   I decided to create a new table as well as a simple bar chart displaying the top skills.
+2. Top skills in the highest paying job postings
+   
+To identify the skills associated with the highest paying positions I've filtered in the previous step, I added the required data from the dimension tables.
+I decided to create a new table as well as a simple bar chart displaying the top skills.
 
    ![top_skills](https://github.com/user-attachments/assets/a918e944-f08a-4ea9-a198-d85d4eabf97f)
    _Bar chart visualizing the necessary skills for the highest-paying Data Analyst jobs_
 
 
-4. Most in-demand skills for data analysts
-   The next task was to list the top 5 most valuable skills a data analyst should have - those that appeared in most of the listings, regardless of location or salary.
-   I agained joined three tables to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a      simple visualization in form of a pie chart.
+3. Most in-demand skills for data analysts
+   
+The next task was to list the top 5 most valuable skills a data analyst should have - those that appeared in most of the listings, regardless of location or salary.
+I agained joined three tables to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a     simple visualization in form of a pie chart.
    
  ![in_demand_skills](https://github.com/user-attachments/assets/49fe2479-86e1-460c-8f13-9f6d37988788)
  _Pie chart visualizing the most in-demand skills for Data Analyst jobs in general_
  
-6. Skills associated with high salaries
-   Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered down to include     only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of chatgpt to get meaningful insights.
+4. Skills associated with high salaries
+   
+Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered down to include    only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of chatgpt to get meaningful insights.
 
 ```sql
 SELECT 
@@ -82,8 +86,22 @@ ORDER BY
 LIMIT 25;
 ```
 
-6. Most optimal skills
-   The last question I wanted to answer in this project was what are the most optimal skills (aka both in demand and associated with high salaries) to learn. I filtered the skills    first by average salary associated with the skill then by count of job postings for which this skill was required. This highlighted the spcific skills that are in demand and       well paid. 
+5. Most optimal skills
+   
+The last question I wanted to answer in this project was what are the most optimal skills (aka both in demand and associated with high salaries) to learn. I filtered the 	skills first by average salary associated with the skill then by count of job postings for which this skill was required. This highlighted the spcific skills that are in demand and well paid. 
+
+| **Skill ID** | **Skill**     | **Demand Count** | **Avg. Salary ($)** |
+|-------------|-------------|----------------|----------------|
+| 92          | Spark       | 187            | 113,002        |
+| 80          | Snowflake   | 241            | 111,578        |
+| 75          | Databricks  | 102            | 112,881        |
+| 97          | Hadoop      | 140            | 110,888        |
+| 93          | Pandas      | 90             | 110,767        |
+| 81          | GCP         | 78             | 113,065        |
+| 96          | Airflow     | 71             | 116,387        |
+| 210         | Git         | 74             | 112,250        |
+| 95          | PySpark     | 49             | 114,058        |
+| 3           | Scala       | 59             | 115,480        |
 
 
 # Results
@@ -93,7 +111,8 @@ I identified the top paying remote Data Analyst jobs by analyzing all the 2023 d
 Analysing the job postings I found out that the most in-demand skills are not always the highest-paid. SQL, Python, and Tableau appear frequently in job postings, but they are not in the highest-paying jobs. On the other hand PySpark, Bitbucket, and Couchbase dominate high-paying job listings, but don’t appear in the most frequently listed skills.
 → This suggests high specialization = higher salary, while generalist skills (SQL, Python, Excel) are needed in many roles but may not be as lucrative.
 
-_ChatGPT generated these suggees based on my SQL query results:_
+_ChatGPT generated these suggestions based on my SQL query results:_
+
 **If You Want a High-Paying Job: Specialize in Big Data, AI, and DevOps**
 Learn PySpark, Databricks, Kubernetes, and Airflow for big data engineering roles.
 Gain experience with Couchbase, Elasticsearch, Watson, and DataRobot for AI & analytics.
