@@ -114,15 +114,21 @@ Analysing the job postings I found out that the most in-demand skills are not al
 _ChatGPT generated these suggestions based on my SQL query results:_
 
 **If You Want a High-Paying Job: Specialize in Big Data, AI, and DevOps**
+
 Learn PySpark, Databricks, Kubernetes, and Airflow for big data engineering roles.
+
 Gain experience with Couchbase, Elasticsearch, Watson, and DataRobot for AI & analytics.
+
 Strengthen GitLab, Bitbucket, Jenkins, and CI/CD pipelines for DevOps roles.
 
 **If You Want a Secure Job with High Demand: Master SQL, Python, and BI Tools**
+
 SQL, Python, Excel, and Tableau appear in the most job postings.
+
 Learn Power BI, Snowflake, and R if you’re in analytics.
 
 **Cloud & DevOps Skills Boost Salary**
+
 AWS, Azure, Kubernetes, and Jenkins bridge data & software engineering for high-paying roles.
 
 
