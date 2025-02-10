@@ -25,7 +25,7 @@ All the data comes from Luke Barousse's SQL Course (https://lukebarousse.com/sql
 
 Each query for this project aimed at investigating specific aspects of the data job market.
 
-1. Top paying remote data analyst jobs
+### 1. Top paying remote data analyst jobs
 
 To identify the highest-paying job offers I filtered data analyst positions by average yearly salary and location, focusing on remote jobs.
 This query highlights the highest-paying opportunities in the field.
@@ -46,7 +46,7 @@ This query highlights the highest-paying opportunities in the field.
 | 387860     | Get It Recruit - Information Technology      | ERM Data Analyst                              | Full-time   | 184,000       |
 
 
-2. Top skills in the highest paying job postings
+### 2. Top skills in the highest paying job postings
    
 To identify the skills associated with the highest paying positions I added the necessary columns from the dimension tables to my dataset and then filtered my data in the same manner as I did in the previous query. I decided to create a new table, as well as a simple bar chart displaying the top skills.
 
@@ -54,7 +54,7 @@ To identify the skills associated with the highest paying positions I added the 
    _Bar chart visualizing the necessary skills for the highest-paying Data Analyst jobs_
 
 
-3. Most in-demand skills for data analysts
+### 3. Most in-demand skills for data analysts
    
 The next task was to list the top 5 most valuable skills a data analyst should have - those that appeared in most of the listings, regardless of location or salary.
 I agained joined three tables to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a simple visualization in form of pie chart.
@@ -62,7 +62,7 @@ I agained joined three tables to get all the neccessary data and finally filtere
  ![in_demand_skills](https://github.com/user-attachments/assets/49fe2479-86e1-460c-8f13-9f6d37988788)
  _Pie chart visualizing the most in-demand skills for Data Analyst jobs in general_
  
-4. Skills associated with high salaries
+### 4. Skills associated with high salaries
    
 Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered down to include only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of ChatGPT to get meaningful insights.
 
@@ -85,7 +85,7 @@ ORDER BY
 LIMIT 25;
 ```
 
-5. Most optimal skills
+### 5. Most optimal skills
    
 The last question I wanted to answer in this project was what are the most optimal skills (aka both in demand and associated with high salaries) to learn. I filtered the skills first by average salary associated with the skill then by count of job postings in which this skill was listed. This highlighted the specific skills that are in-demand and well paid. 
 
@@ -114,21 +114,21 @@ _ChatGPT generated these suggestions based on my SQL query results:_
 
 **If You Want a High-Paying Job: Specialize in Big Data, AI, and DevOps**
 
-Learn PySpark, Databricks, Kubernetes, and Airflow for big data engineering roles.
+- Learn PySpark, Databricks, Kubernetes, and Airflow for big data engineering roles.
 
-Gain experience with Couchbase, Elasticsearch, Watson, and DataRobot for AI & analytics.
+- Gain experience with Couchbase, Elasticsearch, Watson, and DataRobot for AI & analytics.
 
-Strengthen GitLab, Bitbucket, Jenkins, and CI/CD pipelines for DevOps roles.
+- Strengthen GitLab, Bitbucket, Jenkins, and CI/CD pipelines for DevOps roles.
 
 **If You Want a Secure Job with High Demand: Master SQL, Python, and BI Tools**
 
-SQL, Python, Excel, and Tableau appear in the most job postings.
+- SQL, Python, Excel, and Tableau appear in the most job postings.
 
-Learn Power BI, Snowflake, and R if you’re in analytics.
+- Learn Power BI, Snowflake, and R if you’re in analytics.
 
 **Cloud & DevOps Skills Boost Salary**
 
-AWS, Azure, Kubernetes, and Jenkins bridge data & software engineering for high-paying roles.
+- AWS, Azure, Kubernetes, and Jenkins bridge data & software engineering for high-paying roles.
 
 
 ## Closing thoughts
