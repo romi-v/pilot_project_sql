@@ -18,19 +18,19 @@ All the data comes from Luke Barousse's SQL Course (https://lukebarousse.com/sql
 - **SQL** - most of my analysis was performed using sql, allowing me to query the database and gain critical insights
 - **postgresql** - the chosen database management system, ideal for handling the job posting data
 - **pgadmin4** for executing queries
-- **ChatGPT** to speed up some of the steps
+- **ChatGPT** to speed up some steps of the process
 - **Git, GitHub** for version control and for sharing my scripts :)
 
 ## The Analysis
 
-Each query for this project aimed at investgating specific aspects of the data job market.
+Each query for this project aimed at investigating specific aspects of the data job market.
 
 1. Top paying remote data analyst jobs
 
-To identify the highest-paying job offers I filtered data analyst positions by average yearly salary and location, focusing on reemote jobs.
+To identify the highest-paying job offers I filtered data analyst positions by average yearly salary and location, focusing on remote jobs.
 This query highlights the highest-paying opportunities in the field.
 
-   _Overview over the top 10 highest paying remote job opportunities for Data Analysts_
+   _Overview over the top 10 highest paying remote job opportunities in 2023 for Data Analysts_
 
 | **Job ID**  | **Company**                                      | **Job Title**                                    | **Job Type** | **Salary ($)** |
 |------------|------------------------------------------------|-------------------------------------------------|-------------|---------------|
@@ -48,8 +48,7 @@ This query highlights the highest-paying opportunities in the field.
 
 2. Top skills in the highest paying job postings
    
-To identify the skills associated with the highest paying positions I've filtered in the previous step, I added the required data from the dimension tables.
-I decided to create a new table as well as a simple bar chart displaying the top skills.
+To identify the skills associated with the highest paying positions I added the necessary columns from the dimension tables to my dataset and then filtered my data in the same manner as I did in the previous query. I decided to create a new table, as well as a simple bar chart displaying the top skills.
 
    ![top_skills](https://github.com/user-attachments/assets/a918e944-f08a-4ea9-a198-d85d4eabf97f)
    _Bar chart visualizing the necessary skills for the highest-paying Data Analyst jobs_
@@ -58,14 +57,14 @@ I decided to create a new table as well as a simple bar chart displaying the top
 3. Most in-demand skills for data analysts
    
 The next task was to list the top 5 most valuable skills a data analyst should have - those that appeared in most of the listings, regardless of location or salary.
-I agained joined three tables to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a     simple visualization in form of a pie chart.
+I agained joined three tables to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a simple visualization in form of pie chart.
    
  ![in_demand_skills](https://github.com/user-attachments/assets/49fe2479-86e1-460c-8f13-9f6d37988788)
  _Pie chart visualizing the most in-demand skills for Data Analyst jobs in general_
  
 4. Skills associated with high salaries
    
-Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered down to include    only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of chatgpt to get meaningful insights.
+Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered down to include only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of ChatGPT to get meaningful insights.
 
 ```sql
 SELECT 
@@ -88,7 +87,7 @@ LIMIT 25;
 
 5. Most optimal skills
    
-The last question I wanted to answer in this project was what are the most optimal skills (aka both in demand and associated with high salaries) to learn. I filtered the 	skills first by average salary associated with the skill then by count of job postings for which this skill was required. This highlighted the spcific skills that are in demand and well paid. 
+The last question I wanted to answer in this project was what are the most optimal skills (aka both in demand and associated with high salaries) to learn. I filtered the skills first by average salary associated with the skill then by count of job postings in which this skill was listed. This highlighted the specific skills that are in-demand and well paid. 
 
 | **Skill ID** | **Skill**     | **Demand Count** | **Avg. Salary ($)** |
 |-------------|-------------|----------------|----------------|
@@ -106,10 +105,10 @@ The last question I wanted to answer in this project was what are the most optim
 
 # Results
 
-I identified the top paying remote Data Analyst jobs by analyzing all the 2023 data job postings. I dug deeper into the data to provide some insights on what skills are necessary for a Data Analyst to have and which specific skills are associated with the highest-paying jobs.  
+In this project I identified the top paying remote Data Analyst jobs by analyzing all 2023 data job postings. I dug deeper into the data set to provide some insights on what skills are necessary for a Data Analyst to have and which specific skills are associated with the best paid positions.  
 
 Analysing the job postings I found out that the most in-demand skills are not always the highest-paid. SQL, Python, and Tableau appear frequently in job postings, but they are not in the highest-paying jobs. On the other hand PySpark, Bitbucket, and Couchbase dominate high-paying job listings, but don’t appear in the most frequently listed skills.
-→ This suggests high specialization = higher salary, while generalist skills (SQL, Python, Excel) are needed in many roles but may not be as lucrative.
+→ This suggests high specialization means higher salary, while generalist skills (SQL, Python, Excel) are needed in many roles but may not be as lucrative.
 
 _ChatGPT generated these suggestions based on my SQL query results:_
 
