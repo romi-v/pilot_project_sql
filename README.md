@@ -18,12 +18,12 @@ All the data comes from Luke Barousse's SQL Course (https://lukebarousse.com/sql
 - **SQL** - most of my analysis was performed using sql, allowing me to query the database and gain critical insights
 - **postgresql** - the chosen database management system, ideal for handling the job posting data
 - **pgadmin4** for executing queries
-- **ChatGPT** to speed up some steps of the process
+- **ChatGPT** to help me sum up some of the results
 - **Git, GitHub** for version control and for sharing my scripts :)
 
 ## The Analysis
 
-Each query for this project aimed at investigating specific aspects of the data job market.
+Each query aimed at investigating specific aspects of the data job market.
 
 ### 1. Top paying remote data analyst jobs
 
