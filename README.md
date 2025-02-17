@@ -36,7 +36,7 @@ This query highlights the highest-paying opportunities in the field.
 |------------|------------------------------------------------|-------------------------------------------------|-------------|---------------|
 | 226942     | Mantys                                         | Data Analyst                                   | Full-time   | 650,000       |
 | 547382     | Meta                                          | Director of Analytics                         | Full-time   | 336,500       |
-| 552322     | AT&T                                          | Associate Director - Data Insights            | Full-time   | 255,829.50    |
+| 552322     | AT&T                                          | Associate Director - Data Insights            | Full-time   | 255,829    |
 | 99305      | Pinterest Job Advertisements                 | Data Analyst, Marketing                       | Full-time   | 232,423       |
 | 1021647    | UCLA Healthcare Careers                      | Data Analyst (Hybrid/Remote)                  | Full-time   | 217,000       |
 | 168310     | SmartAsset                                    | Principal Data Analyst (Remote)               | Full-time   | 205,000       |
@@ -48,7 +48,7 @@ This query highlights the highest-paying opportunities in the field.
 
 ### 2. Top skills in the highest paying job postings
    
-To identify the skills associated with the highest paying positions I added the necessary columns from the dimension tables to my dataset and then filtered my data in the same manner as I did in the previous query. I decided to create a new table, as well as a simple bar chart displaying the top skills.
+What skills were associated with these highest paying job opportunities? To identify these, I used join function to get all the necessary data in one overview table and then filtered my data in the same manner as I did in the previous query. I went for a simple bar chart here to display the top skills. 
 
    ![top_skills](https://github.com/user-attachments/assets/a918e944-f08a-4ea9-a198-d85d4eabf97f)
    _Bar chart visualizing the necessary skills for the highest-paying Data Analyst jobs_
@@ -57,14 +57,14 @@ To identify the skills associated with the highest paying positions I added the 
 ### 3. Most in-demand skills for data analysts
    
 The next task was to list the top 5 most valuable skills a data analyst should have - those that appeared in most of the listings, regardless of location or salary.
-I agained joined three tables to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a simple visualization in form of pie chart.
+I agained joined selected columns from my two dimension tables and my fact table to get all the neccessary data and finally filtered the skills by the amount of appearances of any given skill in job listings. I also created a simple visualization in form of pie chart.
    
  ![in_demand_skills](https://github.com/user-attachments/assets/49fe2479-86e1-460c-8f13-9f6d37988788)
  _Pie chart visualizing the most in-demand skills for Data Analyst jobs in general_
  
 ### 4. Skills associated with high salaries
    
-Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered down to include only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of ChatGPT to get meaningful insights.
+Here I focused on the specific skills that were associated with the highest salaries. I calculated the average salary associated with each skill, then filtered the data to include only Data Analyst roles and highest average salaries. Finally I analyzed the results with help of ChatGPT to get meaningful insights.
 
 ```sql
 SELECT 
@@ -107,7 +107,7 @@ The last question I wanted to answer in this project was what are the most optim
 
 In this project I identified the top paying remote Data Analyst jobs by analyzing all 2023 data job postings. I dug deeper into the data set to provide some insights on what skills are necessary for a Data Analyst to have and which specific skills are associated with the best paid positions.  
 
-Analysing the job postings I found out that the most in-demand skills are not always the highest-paid. SQL, Python, and Tableau appear frequently in job postings, but they are not in the highest-paying jobs. On the other hand PySpark, Bitbucket, and Couchbase dominate high-paying job listings, but don’t appear in the most frequently listed skills.
+Analysing the job postings I found out that the most in-demand skills are not always the highest-paid. SQL, Python, and Tableau appear frequently in job postings, but they may not be listed in the highest-paying jobs. On the other hand PySpark, Bitbucket, and Couchbase dominate high-paying job listings, but don’t appear in the most frequently listed skills.
 → This suggests high specialization means higher salary, while generalist skills (SQL, Python, Excel) are needed in many roles but may not be as lucrative.
 
 _ChatGPT generated these suggestions based on my SQL query results:_
@@ -133,4 +133,4 @@ _ChatGPT generated these suggestions based on my SQL query results:_
 
 ## Closing thoughts
 
-This challenging project really enhanced my SQL skills and provided some valuable insights into the data analyst job market. Aspiring data analysts can use these results as a guide to prioritizing skill development and can better position themselves in the competetive job market by focusing on high-demand, high-salary skills. This project also highlights the importance of continuous learning and adaptation to new trends in the field of data analytics.
+This challenging project really enhanced my SQL skills and provided some valuable insights into the data analyst job market. Aspiring data analysts can use these results as a guide to prioritizing skill development, helping them better position themselves in the competitive job market by focusing on high-demand, high-salary skills. This project also highlights the importance of continuous learning and adaptation to new trends in the field of data analytics.
