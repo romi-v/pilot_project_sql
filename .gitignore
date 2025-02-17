@@ -1,0 +1,6 @@
+*.csv
+.DS_Store
+sql_load/1_create_database.sql
+sql_load/2_create_tables.sql
+sql_load/3_modify_tables.sql
+Untitled.sql
